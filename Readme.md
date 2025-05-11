@@ -1,4 +1,6 @@
-﻿<img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" /> #Projeto Árvore Binária em C++ para Estudo
+﻿#Projeto Árvore Binária em C++ para Estudo
+ 
+ <img width="70" height="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" /> 
 
 Este repositório contém um projeto pessoal de estudo em C++ focado na implementação e manipulação de árvores binárias. O objetivo principal é aprofundar o conhecimento em C++, especialmente no que diz respeito a ponteiros e gerenciamento de memória, ao mesmo tempo em que revisito os conceitos de árvores binárias aprendidos anteriormente em Python.
 

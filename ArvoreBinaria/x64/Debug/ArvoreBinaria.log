@@ -1,0 +1,3 @@
+﻿  ArvoreBinaria.cpp
+C:\ArvoreBinaria\ArvoreBinaria\ArvoreBinaria.cpp(151,1): warning C4715: 'deletarNode': nem todos os caminhos de controle retornam um valor
+  ArvoreBinaria.vcxproj -> C:\ArvoreBinaria\x64\Debug\ArvoreBinaria.exe

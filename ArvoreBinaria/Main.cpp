@@ -10,7 +10,7 @@ int main() {
 		opcoesArvore(raiz);
 	}
 	else {
-		cout << "Erro ao criar a árvore." << endl;
+		cout << "Erro ao criar a arvore." << endl;
 	}
 
 	return 0;

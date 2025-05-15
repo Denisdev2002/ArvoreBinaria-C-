@@ -13,8 +13,8 @@ void inserirNode(Node*& node, int value);
 Node* deletarNode(Node* node, int valorDeletar);
 void imprimirArvoreVisual(Node* node);
 Node* buscarNode(Node* node, int value);
-void reverterArvore(Node*& node);
-void opcoesArvore(Node* node); // Função para exibir opções de manipulação da árvore
+void inverterArvore(Node*& node);
+void opcoesArvore(Node* node);
 int alturaArvore(Node* node);
 void imprimirNivel(Node* node, int nivel, int espaco);
 void inserirNodeFilho(Node*& node, int value, char lado);

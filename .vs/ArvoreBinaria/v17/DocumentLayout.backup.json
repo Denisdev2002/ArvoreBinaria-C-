@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\ArvoreBinaria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E222D1B-6FD5-4A6D-A29B-05515A0CC82A}|ArvoreBinaria\\ArvoreBinaria.vcxproj|C:\\ArvoreBinaria\\ArvoreBinaria\\Readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{3E222D1B-6FD5-4A6D-A29B-05515A0CC82A}|ArvoreBinaria\\ArvoreBinaria.vcxproj|solutionrelative:ArvoreBinaria\\Readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+      "AbsoluteMoniker": "D:0:0:{3E222D1B-6FD5-4A6D-A29B-05515A0CC82A}|ArvoreBinaria\\ArvoreBinaria.vcxproj|C:\\ArvoreBinaria\\ArvoreBinaria\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3E222D1B-6FD5-4A6D-A29B-05515A0CC82A}|ArvoreBinaria\\ArvoreBinaria.vcxproj|solutionrelative:ArvoreBinaria\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E222D1B-6FD5-4A6D-A29B-05515A0CC82A}|ArvoreBinaria\\ArvoreBinaria.vcxproj|C:\\ArvoreBinaria\\ArvoreBinaria\\ArvoreBinaria.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -13,10 +13,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3E222D1B-6FD5-4A6D-A29B-05515A0CC82A}|ArvoreBinaria\\ArvoreBinaria.vcxproj|C:\\ArvoreBinaria\\ArvoreBinaria\\ArvoreBinaria.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3E222D1B-6FD5-4A6D-A29B-05515A0CC82A}|ArvoreBinaria\\ArvoreBinaria.vcxproj|solutionrelative:ArvoreBinaria\\ArvoreBinaria.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E222D1B-6FD5-4A6D-A29B-05515A0CC82A}|ArvoreBinaria\\ArvoreBinaria.vcxproj|C:\\ArvoreBinaria\\ArvoreBinaria\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3E222D1B-6FD5-4A6D-A29B-05515A0CC82A}|ArvoreBinaria\\ArvoreBinaria.vcxproj|solutionrelative:ArvoreBinaria\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Readme.md",
-              "DocumentMoniker": "C:\\ArvoreBinaria\\ArvoreBinaria\\Readme.md",
-              "RelativeDocumentMoniker": "ArvoreBinaria\\Readme.md",
-              "ToolTip": "C:\\ArvoreBinaria\\ArvoreBinaria\\Readme.md",
-              "RelativeToolTip": "ArvoreBinaria\\Readme.md",
-              "ViewState": "AgIAABkAAAAAAAAAAAAYwDEAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-05-11T22:34:50.699Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -49,21 +32,23 @@
               "RelativeDocumentMoniker": "ArvoreBinaria\\ArvoreBinaria.h",
               "ToolTip": "C:\\ArvoreBinaria\\ArvoreBinaria\\ArvoreBinaria.h",
               "RelativeToolTip": "ArvoreBinaria\\ArvoreBinaria.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-11T16:02:05.061Z"
+              "WhenOpened": "2025-05-11T16:02:05.061Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Main.cpp",
               "DocumentMoniker": "C:\\ArvoreBinaria\\ArvoreBinaria\\Main.cpp",
               "RelativeDocumentMoniker": "ArvoreBinaria\\Main.cpp",
               "ToolTip": "C:\\ArvoreBinaria\\ArvoreBinaria\\Main.cpp",
               "RelativeToolTip": "ArvoreBinaria\\Main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-11T15:56:34.651Z"
+              "WhenOpened": "2025-05-11T15:56:34.651Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -73,7 +58,7 @@
               "RelativeDocumentMoniker": "ArvoreBinaria\\ArvoreBinaria.cpp",
               "ToolTip": "C:\\ArvoreBinaria\\ArvoreBinaria\\ArvoreBinaria.cpp",
               "RelativeToolTip": "ArvoreBinaria\\ArvoreBinaria.cpp",
-              "ViewState": "AgIAALcAAAAAAAAAAAAiwMgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAawCUAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-11T15:50:42.978Z",
               "EditorCaption": ""

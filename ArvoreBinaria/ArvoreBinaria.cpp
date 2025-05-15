@@ -4,54 +4,68 @@
 using namespace std;
 // Função para exibir funções de manipulação da árvore
 void opcoesArvore(Node* node) {
-	cout << "Escolha uma opção:" << endl;
-	cout << "1. Inserir nó" << endl;
-	cout << "2. Deletar nó" << endl;
-	cout << "3. Buscar nó" << endl;
-	cout << "4. Reverter árvore" << endl;
-	cout << "5. Imprimir árvore" << endl;
-	cout << "6. Adicionar um filho a um nó especifico" << endl;
+	cout << "Escolha uma opcao:" << endl;
+	cout << "1. Inserir no" << endl;
+	cout << "2. Deletar no" << endl;
+	cout << "3. Buscar no" << endl;
+	cout << "4. Inverter arvore" << endl;
+	cout << "5. Imprimir arvore" << endl;
+	cout << "6. Adicionar um filho a um no especifico" << endl;
 	cout << "7. Sair" << endl;
 	int opcao;
 	cin >> opcao;
 	switch (opcao) {
 	case 1:
 		int valor;
-		cout << "Digite o valor do nó a ser inserido: ";
+		cout << "Digite o valor do no a ser inserido: ";
 		cin >> valor;
 		inserirNode(node, valor);
 		break;
 	case 2:
 		int valorDeletar;
-		cout << "Digite o valor do nó a ser deletado: ";
+		cout << "Digite o valor do no a ser deletado: ";
 		cin >> valorDeletar;
 		deletarNode(node, valorDeletar);
 		break;
 	case 3:
 		int valorBuscar;
-		cout << "Digite o valor do nó a ser buscado: ";
+		cout << "Digite o valor do no a ser buscado: ";
 		cin >> valorBuscar;
 		buscarNode(node, valorBuscar);
 		break;
 	case 4:
-		reverterArvore(node);
+		inverterArvore(node);
+		cout << "Arvore revertida!" << endl;
 		break;
 	case 5:
 		imprimirArvoreVisual(node);
 		break;
-	case 6:
+	case 6: {
 		int valorFilho;
 		char lado;
-		cout << "Digite o valor do nó filho a ser inserido: ";
+		int valorPai;
+		Node* paiEncontrado = nullptr;
+
+		cout << "Digite o valor do no filho a ser inserido: ";
 		cin >> valorFilho;
 		cout << "Digite o lado (E para esquerda, D para direita): ";
 		cin >> lado;
-		inserirNodeFilho(node, valorFilho, lado);
+		cout << "Digite o valor do no pai: ";
+		cin >> valorPai;
+
+		paiEncontrado = buscarNode(node, valorPai);
+		if (paiEncontrado != nullptr) {
+			inserirNodeFilho(paiEncontrado, valorFilho, lado);
+		}
+		else {
+			cout << "No pai nao encontrado na arvore!" << endl;
+		}
 		break;
+	}
 	case 7:
 		exit(0);
 	default:
-		cout << "Opção inválida!" << endl;
+		cout << "Opcao invalida!" << endl;
 	}
 	cout << endl;
 	opcoesArvore(node);
@@ -60,10 +74,10 @@ void opcoesArvore(Node* node) {
 // Função para criar uma árvore binária
 Node* criarArvore() {
 	int valor;
-	cout << "Digite o valor do nó raiz: ";
+	cout << "Digite o valor do no raiz: ";
 	cin >> valor;
 	Node* root = new Node(valor);
-	cout << "Árvore criada com o nó raiz: " << root->data << endl;
+	cout << "Arvore criada com o no raiz: " << root->data << endl;
 	return root;
 }
 
@@ -81,14 +95,14 @@ void imprimirNivel(Node* node, int nivel, int espaco) {
 		return;
 	}
 
-	imprimirNivel(node->left, nivel + 1, espaco);
+	imprimirNivel(node->right, nivel + 1, espaco); // imprima a direita primeiro
 
 	for (int i = 0; i < espaco * nivel; i++) {
 		cout << " ";
 	}
 	cout << node->data << endl;
 
-	imprimirNivel(node->right, nivel + 1, espaco);
+	imprimirNivel(node->left, nivel + 1, espaco); // depois a esquerda
 }
 
 // Função principal para imprimir arvore de forma visual
@@ -111,7 +125,7 @@ void imprimirArvore(Node* node) {
 // Função para deletar um nó e seus nós filhos
 Node* deletarNode(Node* node, int valorDeletar) {
 	if (node == nullptr) {
-		cout << "Nó não encontrado!" << endl;
+		cout << "No nao encontrado!" << endl;
 		return node;
 	}
 	if (valorDeletar < node->data) {
@@ -124,19 +138,19 @@ Node* deletarNode(Node* node, int valorDeletar) {
 		if (node->left == nullptr && node->right == nullptr) {
 			delete node;
 			node = nullptr;
-			cout << "Nó deletado!" << endl;
+			cout << "No deletado!" << endl;
 		}
 		else if (node->left == nullptr) {
 			Node* temp = node->right;
 			delete node;
 			node = temp;
-			cout << "Nó deletado!" << endl;
+			cout << "No deletado!" << endl;
 		}
 		else if (node->right == nullptr) {
 			Node* temp = node->left;
 			delete node;
 			node = temp;
-			cout << "Nó deletado!" << endl;
+			cout << "No deletado!" << endl;
 		}
 		else {
 			Node* temp = node->right;
@@ -145,7 +159,7 @@ Node* deletarNode(Node* node, int valorDeletar) {
 			}
 			node->data = temp->data;
 			node->right = deletarNode(node->right, temp->data);
-			cout << "Nó deletado!" << endl;
+			cout << "No deletado!" << endl;
 		}
 	}
 }
@@ -154,7 +168,7 @@ Node* deletarNode(Node* node, int valorDeletar) {
 void inserirNode(Node*& node, int value) {
 	if (node == nullptr) {
 		node = new Node(value);
-		cout << "Nó inserido: " << value << endl;
+		cout << "No inserido: " << value << endl;
 	}
 	else if (value < node->data) {
 		inserirNode(node->left, value);
@@ -163,14 +177,14 @@ void inserirNode(Node*& node, int value) {
 		inserirNode(node->right, value);
 	}
 	else {
-		cout << "Valor já existe na árvore!" << endl;
+		cout << "Valor ja existe na arvore!" << endl;
 	}
 }
 
 // Função para inserir um nó filho na árvore
 void inserirNodeFilho(Node*& pai, int value, char lado) {
 	if (pai == nullptr) {
-		cout << "Nó pai invalido!" << endl;
+		cout << "No pai invalido!" << endl;
 		return;
 	}
 
@@ -179,23 +193,23 @@ void inserirNodeFilho(Node*& pai, int value, char lado) {
 	if (lado == 'E' || lado == 'e') {
 		if (pai->left == nullptr) {
 			pai->left = novoNode;
-			cout << "Nó filho inserido à esquerda: " << value << endl;
+			cout << "No filho inserido a esquerda: " << value << endl;
 		}
 		else {
-			cout << "Já existe um nó à esquerda!" << endl;
+			cout << "Ja existe um no a esquerda!" << endl;
 		}
 	}
 	else if (lado == 'D' || lado == 'd') {
 		if (pai->right == nullptr) {
 			pai->right = novoNode;
-			cout << "Nó filho inserido à direita: " << value << endl;
+			cout << "No filho inserido a direita: " << value << endl;
 		}
 		else {
-			cout << "Já existe um nó à direita!" << endl;
+			cout << "Ja existe um no a direita!" << endl;
 		}
 	}
 	else {
-		cout << "Lado inválido! Use 'E' para esquerda ou 'D' para direita." << endl;
+		cout << "Lado invalido! Use 'E' para esquerda ou 'D' para direita." << endl;
 		delete novoNode;
 	}
 }
@@ -203,7 +217,7 @@ void inserirNodeFilho(Node*& pai, int value, char lado) {
 // Função para buscar um nó na árvore
 Node* buscarNode(Node* node, int value) {
 	if (node == nullptr) {
-		cout << "Nó não encontrado!" << endl;
+		cout << "No nao encontrado!" << endl;
 		return nullptr;
 	}
 	if (value < node->data) {
@@ -213,18 +227,17 @@ Node* buscarNode(Node* node, int value) {
 		return buscarNode(node->right, value);
 	}
 	else {
-		cout << "Nó encontrado: " << node->data << endl;
+		cout << "No encontrado: " << node->data << endl;
 		return node;
 	}
 }
 
-// Função para reverter a árvore
-void reverterArvore(Node*& node) {
+// Função para inverter a árvore
+void inverterArvore(Node*& node) {
 	if (node == nullptr) {
 		return;
 	}
 	swap(node->left, node->right);
-	reverterArvore(node->left);
-	reverterArvore(node->right);
-	cout << "Árvore revertida!" << endl;
+	inverterArvore(node->left);
+	inverterArvore(node->right);
 }
